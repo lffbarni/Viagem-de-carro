@@ -9,7 +9,6 @@
         }
         $sql = "INSERT INTO viagens(motorista, localOrigem, localDestino, quilometragem, litrosCombustivel, modeloCarro, valorCombustivel)
         VALUES (:motorista, :localOrigem, :localDestino, :quilometragem, :litrosCombustivel, :modeloCarro, :valorCombustivel)";
-        echo $sql;
         $consulta = $conn->prepare($sql);
         $consulta->execute(array(
             "motorista" => $_POST['motorista'],

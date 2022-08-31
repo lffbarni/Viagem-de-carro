@@ -12,18 +12,17 @@
     $consulta->execute();
     $texto = "";
     foreach($consulta as $linha){
-        $texto = $texto."--------------------------------------------------------<br>";
-        $texto = $texto."Viagem ".$linha['id'].":<br><br>";
-        $texto = $texto."Carro: ".$linha['modeloCarro']."<br>";
-        $texto = $texto."Motorista: ".$linha['motorista']."<br>";
-        $texto = $texto."Origem: ".$linha['localOrigem']."<br>";
-        $texto = $texto."Destino: ".$linha['localDestino']."<br>";
-        $texto = $texto."Quilometragem ".$linha['quilometragem']." Quilômetros<br>";
-        $texto = $texto."Combustível gasto: ".$linha['litrosCombustivel']." Litros<br>";
-        $texto = $texto."Preço combustível: ".$linha['valorCombustivel']." Reais<br>";
-        $texto = $texto."Autonomia: ".($linha['quilometragem']/$linha['litrosCombustivel'])." Quilometros por litro.<br>";
-        $texto = $texto."Preço total: ".($linha['litrosCombustivel']*$linha['valorCombustivel'])." Reais<br>";
-        $texto = $texto."Preço por quilômetro: ".(($linha['litrosCombustivel']*$linha['valorCombustivel'])/$linha['quilometragem'])." Reais<br>";
+        echo "<hr><br>";
+        echo "Viagem ".$linha['id'].":<br><br>";
+        echo "Carro: ".$linha['modeloCarro']."<br>";
+        echo "Motorista: ".$linha['motorista']."<br>";
+        echo "Origem: ".$linha['localOrigem']."<br>";
+        echo "Destino: ".$linha['localDestino']."<br>";
+        echo "Quilometragem ".$linha['quilometragem']." Quilômetros<br>";
+        echo "Combustível gasto: ".$linha['litrosCombustivel']." Litros<br>";
+        echo "Preço combustível: ".$linha['valorCombustivel']." Reais<br>";
+        echo "Autonomia: ".($linha['quilometragem']/$linha['litrosCombustivel'])." Quilometros por litro.<br>";
+        echo "Preço total: ".($linha['litrosCombustivel']*$linha['valorCombustivel'])." Reais<br>";
+        echo "Preço por quilômetro: ".(($linha['litrosCombustivel']*$linha['valorCombustivel'])/$linha['quilometragem'])." Reais<br>";
     }
-    echo $texto;
 ?>

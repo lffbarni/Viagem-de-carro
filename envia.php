@@ -1,12 +1,6 @@
 <?php
-        $username='root';
-        $password='';
-        try {
-            $conn = new PDO('mysql:host=localhost;dbname=viagens', $username, $password);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch(PDOException $e) {
-            echo 'ERROR: ' . $e->getMessage();
-        }
+        include_once 'conexao.php';
+
         $sql = "INSERT INTO viagens(motorista, localOrigem, localDestino, quilometragem, litrosCombustivel, modeloCarro, valorCombustivel)
         VALUES (:motorista, :localOrigem, :localDestino, :quilometragem, :litrosCombustivel, :modeloCarro, :valorCombustivel)";
         $consulta = $conn->prepare($sql);

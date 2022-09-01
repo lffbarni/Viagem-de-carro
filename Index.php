@@ -57,9 +57,11 @@
             </form>
         </div>
     </div> 
-    <center><h1>Listagem de Viagens</h1></center>
-    <center><input type="button" value="listar" id="listar"></center>
-    <center><div class = "resultado" id="resultado"></div></center>
+    <center>
+        <h1>Listagem de Viagens</h1>
+        <input type="button" value="listar" id="listar">
+        <div class = "resultado" id="resultado"></div>
+    </center>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -78,8 +80,8 @@
             })   
         })
         $("#listar").click(function(){
-            $.get("listaviagens.php", function(texto){
-                $("#resultado").html(texto);
+            $.get("listaviagens.php", function(ListaDeViagens){
+                $("#resultado").html(ListaDeViagens);
             })
         })
     })
